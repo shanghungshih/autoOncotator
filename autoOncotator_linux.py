@@ -81,7 +81,7 @@ class autoOncotator:
             try:
                 driver.find_element_by_id('id_file').send_keys(os.path.join(os.getcwd(), project+'.onco.tsv'))
                 driver.find_element_by_name('upload_submit').click()
-                time.sleep(120)
+                time.sleep(90)
                 driver.find_element_by_xpath(xpath).click()
                 time.sleep(3)
                 driver.close()
