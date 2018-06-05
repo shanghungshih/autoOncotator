@@ -93,7 +93,8 @@ class autoOncotator:
 def getID():
     yn = input('Show all patient ID of sub directory?(Y/n) (ex. y): ')
     if yn.strip().lower() == 'y':
-        
+        print('Current directory: ' )
+        os.system('pwd')
         path = input('Please enter the path to your vcf (ex. /home/bio608/OSCC/annotation/86xWES): ')
         prefix = input('Please enter the prefix (ex. 546.mutect2.vcf >>> .mutect2.vcf ): ')
         os.system('ls -lt %s > getID.txt' %(path))
