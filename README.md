@@ -3,7 +3,7 @@ automatically annotate vcf file (called by GATK3.8 Mutect2)
 
 - - -
 ## 1. download firefox
-- For Mac:
+- For Mac:\n
 https://www.mozilla.org/zh-TW/firefox/new/
 - For Linux:
 ```
