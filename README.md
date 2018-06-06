@@ -36,9 +36,10 @@ pip3 install selenium
 ```
 
 
-## 4. copy to your working directory
+## 4. copy autoOncotator_linux.py to your working directory
+- - -
 
-### Usage
+# - Usage
 ```python
 python3 autoOncotator_mac.py
 ```
