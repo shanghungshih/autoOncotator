@@ -39,8 +39,8 @@ pip3 install selenium
 
 ### Usage
 ```python
-python3 autoOncotator_mac
+python3 autoOncotator_mac.py
 ```
 ```python
-python3 autoOncotator_linux
+python3 autoOncotator_linux.py
 ```
