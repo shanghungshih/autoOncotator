@@ -125,7 +125,7 @@ def enterData(name):
     print('Current directory: ' )
     os.system('pwd')
     download = input('Please enter the path to download (ex. /home/bio608/OSCC/annotation/86xWES): ')
-    mvdir = input('Please enter the path to move (ex. /home/bio608/OSCC/data/86xWES)')
+    mvdir = input('Please enter the path to move (ex. /home/bio608/OSCC/data/86xWES): ')
     work = []
     for j, i in enumerate(patient):
         work.append([name[i.strip()], i.strip()])
