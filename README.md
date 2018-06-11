@@ -1,5 +1,5 @@
 # autoOncotator
-automatically annotate vcf (variant call) file with Oncotator
+automatically annotate vcf (variant call) file with Oncotator.
 
 http://portals.broadinstitute.org/oncotator/
 - - -
@@ -36,7 +36,7 @@ pip3 install selenium
 ```
 
 
-## 4. copy autoOncotator_linux.py to your working directory
+## 4. copy autoOncotator.py to your working directory
 - - -
 
 ## Usage
