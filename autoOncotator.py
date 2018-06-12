@@ -82,9 +82,9 @@ class autoOncotator:
                 try:
                     driver.find_element_by_id('id_file').send_keys(os.path.join(os.getcwd(), project+'.onco.tsv'))
                     driver.find_element_by_name('upload_submit').click()
-                    time.sleep(350)
+                    time.sleep(480)
                     driver.find_element_by_xpath(xpath).click()
-                    time.sleep(30)
+                    time.sleep(45)
                     os.system('mv %s %s' %(os.path.join(download, 'oncotator.maf.txt'), os.path.join(download, project+'.oncotator.maf.txt')))
                     os.system('sudo cp %s* %s' %(project, os.path.join(datapath, project)))
                     time.sleep(10)
