@@ -52,17 +52,17 @@ pip3 install selenium
 * `--pool_size` - Pool size of multi-thread for parallel computing (default: 1)
 
 ## Usage
-###  List all vcfs in specified directory (e.g. current working directory)
+### list all vcfs in specified directory (e.g. current working directory)
 ```
 python3 autoOncotator.py -l .
 ```
 
-###  for running one vcf file
+### for running one vcf file
 ```
 python3 autoOncotator.py -v test123.mutect2.vcf
 ```
 
-###  for Parallelly running mutiple vcf files (e.g. pool size = 15)
+### for Parallelly running mutiple vcf files (e.g. pool size = 15)
 * Notes: 'NO SPACE' between vcf files
 ```
 python3 autoOncotator.py -p 15 -v test721.mutect2.filter.vcf,test123.mutect2.filter.vcf,test476.mutect2.filter.vcf
