@@ -1,9 +1,17 @@
-# autoOncotator
-automatically annotate vcf (variant call) file with Oncotator.
+# autoOncotator - Python programs for automatically annotate vcf (variant call) file with Oncotator by selenium webdriver
 
 http://portals.broadinstitute.org/oncotator/
+
+## Prerequisite
+* Python 3.6
+
+## Installation
+``` shell
+git clone https://github.com/shanghungshih/autoOncotator.git
+```
 - - -
-## 1. download firefox
+## Internal Dependencies
+### 1. download firefox
 #### For Mac:
 https://www.mozilla.org/zh-TW/firefox/new/
 
@@ -13,7 +21,7 @@ https://www.mozilla.org/zh-TW/firefox/new/
 sudo apt install firefox
 ```
 
-## 2. download geckodriver (v0.19.1)
+### 2. download geckodriver (v0.19.1)
 https://github.com/mozilla/geckodriver/releases
 ```
 # download geckodriver-v0.19.1
@@ -26,7 +34,7 @@ tar zxvf geckodriver-v0.19.1-linux64.tar.gz
 sudo cp geckodriver /usr/local/bin/
 ```
 
-## 3. install selenium
+### 3. install selenium
 ```
 # install pip3
 sudo apt install python3-pip
@@ -35,12 +43,31 @@ sudo apt install python3-pip
 pip3 install selenium
 ```
 
+### 4. copy autoOncotator.py to your working directory
 
-## 4. copy autoOncotator.py to your working directory
 - - -
+## Current Functions
+* `--vcf` - Variant call file, vcf format
+* `--input_dir` - input directory (default: current working directory)
+* `--output_dir` - output directory (default: current working directory)
+* `--tsv` - Generate the input format file for Oncotator, you can defined the name of the file (default: tsv)
+* `--maf` - output file name (default: oncotator.maf.txt)
+* `--list_id` - list all vcf files in specified directory
+* `--pool_size` - Pool size of multi-thread for parallel computing (default: 1)
 
 ## Usage
-#### for Linux and MacOS
-```python
-python3 autoOncotator.py
+###  List all vcfs in specified directory (e.g. current working directory)
+```
+python3 autoOncotator.py -l .
+```
+
+###  for running one vcf file
+```
+python3 autoOncotator.py -v test123.mutect2.vcf
+```
+
+###  for Parallelly running mutiple vcf files ()
+* Notes: 'NO SPACE' between vcf files
+```
+python3 autoOncotator.py -p 15 -v test721.mutect2.filter.vcf,test123.mutect2.filter.vcf,test476.mutect2.filter.vcf
 ```
