@@ -9,7 +9,6 @@ http://portals.broadinstitute.org/oncotator/
 ``` shell
 git clone https://github.com/shanghungshih/autoOncotator.git
 ```
-- - -
 ## Internal Dependencies
 ### 1. download firefox
 #### For Mac:
@@ -45,7 +44,6 @@ pip3 install selenium
 
 ### 4. copy autoOncotator.py to your working directory
 
-- - -
 ## Current Functions
 * `--vcf` - Variant call file, vcf format
 * `--input_dir` - input directory (default: current working directory)
