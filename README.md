@@ -1,7 +1,7 @@
 # autoOncotator
 - Python programs for automatically annotate vcf (variant call) file with Oncotator by selenium webdriver
 
-http://portals.broadinstitute.org/oncotator/
+- http://portals.broadinstitute.org/oncotator/
 
 ## Prerequisite
 * Python 3.6
