@@ -44,13 +44,13 @@ pip3 install selenium
 ```
 
 ## Current Functions
-* `--vcf` - Variant call file, vcf format
-* `--input_dir` - input directory (default: current working directory)
-* `--output_dir` - output directory (default: current working directory)
-* `--tsv` - Generate the input format file for Oncotator, you can defined the name of the file (default: tsv)
-* `--maf` - output file name (default: oncotator.maf.txt)
-* `--list_id` - list all vcf files in specified directory
-* `--pool_size` - Pool size of multi-thread for parallel computing (default: 1)
+* `v``--vcf` - Variant call file, vcf format
+* `i``--input_dir` - input directory (default: current working directory)
+* `o``--output_dir` - output directory (default: current working directory)
+* `t``--tsv` - Generate the input format file for Oncotator, you can defined the name of the file (default: tsv)
+* `m``--maf` - output file name (default: oncotator.maf.txt)
+* `l``--list_id` - list all vcf files in specified directory
+* `p``--pool_size` - Pool size of multi-thread for parallel computing (default: 1)
 
 ## Usage
 ### list all vcfs in specified directory (e.g. current working directory)
