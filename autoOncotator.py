@@ -93,8 +93,9 @@ class autoOncotator:
             while True:
                 try:
                     time.sleep(480)
-                    time.sleep(9*num)
+                    time.sleep(9*num*2)
                     driver.find_element_by_xpath(xpath).click()
+                    time.sleep(5)
                     os.system('mv %s %s' %(os.path.join(output_dir, 'oncotator.maf.txt'), os.path.join(output_dir, project.replace('.vcf', '.'+maf))))
                     break
                 except:
@@ -104,8 +105,9 @@ class autoOncotator:
             while True:
                 try:
                     time.sleep(240)
-                    time.sleep(9*num)
+                    time.sleep(9*num*2)
                     driver.find_element_by_xpath(xpath).click()
+                    time.sleep(5)
                     os.system('mv %s %s' %(os.path.join(output_dir, 'oncotator.maf.txt'), os.path.join(output_dir, project.replace('.vcf', '.'+maf))))
                     break
                 except:
@@ -207,7 +209,7 @@ python3 autoOncotator.py -p 10 -v test_562.mutect2.vcf,test_553.mutect2.vcf,test
         txt = str()
         for i in test:
             txt += i+','
-        logger_stderr.info('list all vcfs in [%s]' %(os.getcwd()))
+        logger_stderr.info('list all vcfs in [%s]' %(args.list_id))
         logger_stderr.info('Num. of list: [%s]' %(len(test)))
         logger_stderr.info('list: [%s]' %(txt[:-1]))
     
