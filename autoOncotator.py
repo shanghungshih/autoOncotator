@@ -148,7 +148,7 @@ Usage:
 1. List all vcfs in specified directory (e.g. current working directory)
 python3 autoOncotator.py -l .
 2. for running one vcf file
-python3 autoOncotator.py -v test123.mutect2.vcf
+python3 autoOncotator.py -v test_562.mutect2.vcf
 3. for Parallelly running mutiple vcf files (e.g. pool size = 15)
 * Notes: 'NO SPACE' between vcf files
 python3 autoOncotator.py -p 15 -v test721.mutect2.filter.vcf,test123.mutect2.filter.vcf,test476.mutect2.filter.vcf
