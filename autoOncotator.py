@@ -212,5 +212,3 @@ python3 autoOncotator.py -p 10 -v test_562.mutect2.vcf,test_553.mutect2.vcf,test
         logger_stderr.info('list all vcfs in [%s]' %(args.list_id))
         logger_stderr.info('Num. of list: [%s]' %(len(test)))
         logger_stderr.info('list: [%s]' %(txt[:-1]))
-    
-
