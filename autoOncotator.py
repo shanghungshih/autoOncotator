@@ -152,7 +152,7 @@ python3 autoOncotator.py -l .
 2. for running one vcf file
 python3 autoOncotator.py -v test_562.mutect2.vcf
 3. for Parallelly running mutiple vcf files (e.g. pool size = 15)
-* Notes: 'NO SPACE' between vcf files
+* Notes: 'no space' between vcf files
 python3 autoOncotator.py -p 10 -v test_562.mutect2.vcf,test_553.mutect2.vcf,test_546.mutect2.vcf,test_543.mutect2.vcf,test_556.mutect2.vcf,test_544.mutect2.vcf,test_573.mutect2.vcf,test_548.mutect2.vcf,test_579.mutect2.vcf,test_565.mutect2.vcf
 """))
     optional = parser._action_groups.pop()
