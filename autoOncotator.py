@@ -6,6 +6,7 @@ Created on Wed Jul  4 22:46:11 2018
 @author: shanghungshih
 """
 
+import sys
 import os
 import time
 import warnings
@@ -25,7 +26,7 @@ logger_null = logging.getLogger(__name__+'null')
 null_handler = logging.NullHandler()
 logger_null.addHandler(null_handler)
 
-VERSION = (1, 0, 0)
+VERSION = (1, 1, 0)
 __version__ = '.'.join(map(str, VERSION[0:3])) + ''.join(VERSION[3:])
 
 class autoOncotator:
@@ -77,7 +78,11 @@ class autoOncotator:
     def oncotator(self, filesize, project, output_dir, tsv, maf, num):
         fail = []
         xpath = '/html/body/div[2]/div[3]/div[1]/a[1]'
-
+        output_dir_raw = output_dir
+        output_dir = os.path.join(output_dir, project.split('.')[0])
+        if os.path.exists(output_dir) is False:
+            os.mkdir(output_dir)
+                        
         profile = webdriver.FirefoxProfile()
         profile.set_preference('browser.download.folderList', 2)
         profile.set_preference('browser.download.dir', output_dir)
@@ -93,10 +98,10 @@ class autoOncotator:
             while True:
                 try:
                     time.sleep(480)
-                    time.sleep(9*num*2)
                     driver.find_element_by_xpath(xpath).click()
                     time.sleep(5)
                     os.system('mv %s %s' %(os.path.join(output_dir, 'oncotator.maf.txt'), os.path.join(output_dir, project.replace('.vcf', '.'+maf))))
+                    os.system('mv %s %s' %(os.path.join(output_dir, project.replace('.vcf', '.'+maf)), output_dir_raw))
                     break
                 except:
                     fail.append(project)
@@ -105,15 +110,16 @@ class autoOncotator:
             while True:
                 try:
                     time.sleep(240)
-                    time.sleep(9*num*2)
                     driver.find_element_by_xpath(xpath).click()
                     time.sleep(5)
                     os.system('mv %s %s' %(os.path.join(output_dir, 'oncotator.maf.txt'), os.path.join(output_dir, project.replace('.vcf', '.'+maf))))
+                    os.system('mv %s %s' %(os.path.join(output_dir, project.replace('.vcf', '.'+maf)), output_dir_raw))
                     break
                 except:
                     fail.append(project)
                     warnings.warn('selenium webdriver error occor: [%s]' %(project))
         driver.close()
+        os.rmdir(output_dir)
         return fail
     
 def work_log(work_data):
