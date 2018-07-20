@@ -51,7 +51,7 @@ pip3 install selenium
 * `--list_id` - list all vcf files in specified directory
 * `--pool_size` - Pool size of multi-thread for parallel computing (default: 1)
 
-## Usage
+## Quick start
 ### list all vcfs in specified directory (e.g. current working directory)
 ```
 python3 autoOncotator.py -l .
