@@ -138,6 +138,7 @@ def work_log(work_data):
 def pool_handler():
     p = Pool(args.pool_size)
     p.map(work_log, work)
+    p.close()
 
 if __name__ == '__main__':
 
@@ -154,12 +155,12 @@ Outputs:
 
 Usage:
 1. List all vcfs in specified directory (e.g. current working directory)
-python3 autoOncotator.py -l .
+    python3 autoOncotator.py -l .
 2. for running one vcf file
-python3 autoOncotator.py -v test_562.mutect2.vcf
+    python3 autoOncotator.py -v test_562.mutect2.vcf
 3. for Parallelly running mutiple vcf files (e.g. pool size = 15)
 * Notes: 'no space' between vcf files
-python3 autoOncotator.py -p 10 -v test_562.mutect2.vcf,test_553.mutect2.vcf,test_546.mutect2.vcf,test_543.mutect2.vcf,test_556.mutect2.vcf,test_544.mutect2.vcf,test_573.mutect2.vcf,test_548.mutect2.vcf,test_579.mutect2.vcf,test_565.mutect2.vcf
+    python3 autoOncotator.py -p 10 -v test_562.mutect2.vcf,test_553.mutect2.vcf,test_546.mutect2.vcf,test_543.mutect2.vcf,test_556.mutect2.vcf,test_544.mutect2.vcf,test_573.mutect2.vcf,test_548.mutect2.vcf,test_579.mutect2.vcf,test_565.mutect2.vcf
 """))
     optional = parser._action_groups.pop()
     required = parser.add_argument_group('required arguments')
