@@ -39,7 +39,7 @@ sudo cp geckodriver /usr/local/bin/
 sudo apt install python3-pip
 
 # install package selenium
-pip3 install selenium
+pip3 install selenium==3.12.0
 ```
 
 ## Current Functions
