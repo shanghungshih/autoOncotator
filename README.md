@@ -33,7 +33,7 @@ tar zxvf geckodriver-v0.19.1-linux64.tar.gz
 sudo cp geckodriver /usr/local/bin/
 ```
 
-### 3. install selenium
+### 3. install selenium (v3.12.0)
 ```
 # install pip3
 sudo apt install python3-pip
