@@ -99,7 +99,7 @@ class autoOncotator:
                 try:
                     time.sleep(480)
                     driver.find_element_by_xpath(xpath).click()
-                    time.sleep(5)
+                    time.sleep(10)
                     os.system('mv %s %s' %(os.path.join(output_dir, 'oncotator.maf.txt'), os.path.join(output_dir, project.replace('.vcf', '.'+maf))))
                     os.system('mv %s %s' %(os.path.join(output_dir, project.replace('.vcf', '.'+maf)), output_dir_raw))
                     break
@@ -111,7 +111,7 @@ class autoOncotator:
                 try:
                     time.sleep(240)
                     driver.find_element_by_xpath(xpath).click()
-                    time.sleep(5)
+                    time.sleep(10)
                     os.system('mv %s %s' %(os.path.join(output_dir, 'oncotator.maf.txt'), os.path.join(output_dir, project.replace('.vcf', '.'+maf))))
                     os.system('mv %s %s' %(os.path.join(output_dir, project.replace('.vcf', '.'+maf)), output_dir_raw))
                     break
